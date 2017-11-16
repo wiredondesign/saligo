@@ -1,4 +1,4 @@
-var productPrice = 100;
+var productPrice = 10000;
 
 var otherRandoms = 
 {

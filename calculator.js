@@ -169,7 +169,7 @@ $(document).ready(function()
         calculateQuote();
     });
     
-    $(".questions-container").on("change", "#wf-form-Alternative-Styles input[type=radio]", function()
+    $(".questions-container").on("change", "#wf-form-Alternative-Styles .quote-style-option input[type=radio]", function()
     {
         var newType = productList[$(this).val()];
         productPrice = newType;

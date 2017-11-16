@@ -49,15 +49,32 @@ var squareMetreMore;
 $(document).ready(function()
 {
     
-    $("#Estimate-Ready").parsley();
+    var form = $("#Estimate-Ready").parsley();
     
+	$("#get-quote-estimate").click(function()
+	{
+		$("#Estimate-Ready").submit();
+		if(!form.isValid())
+		{
+			//show the form again
+			$(".quote-ready").show();
+			$(".quote-cost").hide();
+		}
+		else
+		{
+			$(".quote-ready").hide();
+			$(".quote-cost").show();
+		}
+	});
+	
     $("#Estimate-Ready").submit(function()
     {
         postData = {
             name : $("#quote-name").val(),
             phone : $("#quote-phone").val(),
             email : $("#quote-email").val(),
-            wantACallBack:($("#yes-call-2:checked").length > 0) ? "Yes" : "No",
+            
+			wantACallBack:($("#yes-call-2:checked").length > 0) ? "Yes" : "No",
             
             customerType : $("#wf-form-customer-type input[type=radio]:checked").parent().find("label").text(),
             requireToughening : $("#wf-form-Toughening-Form input[type=radio]:checked").parent().find("label").text(),
@@ -91,7 +108,8 @@ $(document).ready(function()
             url: "http://wiredondesign.co.uk/saligo/all-styles/inc/ajaxSubmit.php",
             type:"POST",
             data:postData,
-            success: function(response)
+            dataType:"jsonp",
+			success: function(response)
             {
             }
         });

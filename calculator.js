@@ -88,7 +88,7 @@ $(document).ready(function()
         
         $.ajax(
         {
-            url: "http://127.0.0.1/Saligo/ajaxSubmit.php",
+            url: "https://cdn.rawgit.com/wiredondesign/saligo/master/calculator.js",
             type:"POST",
             data:postData,
             success: function(response)

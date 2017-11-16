@@ -147,7 +147,7 @@ $(document).ready(function()
     
     $(".questions-container").on("change", "#wf-form-Alternative-Styles input[type=radio]", function()
     {
-        var newType = productList[$(this).parent().find(".quote-style-label").text()];
+        var newType = productList[$(this).val()];
         productPrice = newType;
         calculateQuote();
     });

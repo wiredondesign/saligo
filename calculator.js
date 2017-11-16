@@ -45,25 +45,31 @@ var holeSocket610Total = 0;
 var holeSocket1149Total = 0;
 var grandTotal = 0;
 var squareMetreMore;
-
+var form1;
 $(document).ready(function()
 {
     
-    var form = $("#Estimate-Ready").parsley();
+    form1 = $("#Estimate-Ready").parsley();
     
-	$("#get-quote-estimate").click(function()
+	$("#get-quote-estimate").click(function(e)
 	{
 		$("#Estimate-Ready").submit();
-		if(!form.isValid())
+		if(!form1.isValid())
 		{
 			//show the form again
-			$(".quote-ready").show();
-			$(".quote-cost").hide();
+			setTimeout(function()
+			{
+				$(".quote-ready").show();
+				$(".quote-cost").hide();
+			},100);
 		}
 		else
 		{
-			$(".quote-ready").hide();
-			$(".quote-cost").show();
+			setTimeout(function()
+			{
+				$(".quote-ready").hide();
+				$(".quote-cost").show();
+			},100);
 		}
 	});
 	
@@ -253,5 +259,9 @@ function calculateQuote()
         grandTotal -= (grandTotal * 20)/ 100;
     }
     // final cost
+	if(isNaN(grandTotal))
+	{
+		grandTotal = 0;
+	}
     $("#quote-price").text("£" + grandTotal.toFixed(2));
 }

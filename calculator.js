@@ -172,8 +172,14 @@ $(document).ready(function()
     $(".questions-container").on("change", "#wf-form-Alternative-Styles .quote-style-option input[type=radio]", function()
     {
         var newType = productList[$(this).val()];
-        productPrice = newType;
+        productType = $(this).val();
+		productPrice = newType;
         calculateQuote();
+    });
+	
+	$(".questions-container").on("change", "#yes-call-2", function()
+	{
+		$("#Estimate-Ready").submit();
     });
 });
 

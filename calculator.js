@@ -1,5 +1,3 @@
-var productType = "vintage";
-
 var productList = 
 {
     "vintage" : 810,

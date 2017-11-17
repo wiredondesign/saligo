@@ -176,11 +176,14 @@ $(document).ready(function()
 		productPrice = newType;
         calculateQuote();
     });
-	
-	$(".questions-container").on("change", "#yes-call-2", function()
+		
+	$("#end-quote").on("click", function()
 	{
-		$("#Estimate-Ready").submit();
-    });
+		if($("#yes-call-2:checked").length > 0)
+		{
+			$("#Estimate-Ready").submit();
+		}
+	});
 });
 
 function calculateQuote()

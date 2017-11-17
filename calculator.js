@@ -48,7 +48,7 @@ var squareMetreMore;
 var form1;
 $(document).ready(function()
 {
-    
+    $(".remove-area").hide();
     form1 = $("#Estimate-Ready").parsley();
     
 	$("#get-quote-estimate").click(function(e)

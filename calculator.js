@@ -62,6 +62,17 @@ $(document).ready(function()
 		},100);
 	});
 	
+	$("a[data-ix='q2-next']").click(function()
+	{
+		setTimeout(function()
+		{
+			if($("#wf-form-project-type input[type=radio]:checked").length == 0)
+			{
+				$("a[data-ix='q3-prev']").click();
+			}
+		},100);
+	});
+	
 	$("#get-quote-estimate").click(function(e)
 	{
 		$("#Estimate-Ready").submit();

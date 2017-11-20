@@ -54,6 +54,7 @@ $(document).ready(function()
 	$("a[data-ix='question-1']").click(function()
 	{
 		console.log("asdads");
+		return false;
 	});
 	
 	$("#get-quote-estimate").click(function(e)

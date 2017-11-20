@@ -1,5 +1,3 @@
-// testing the commit
-
 var productList = 
 {
     "vintage" : 810,

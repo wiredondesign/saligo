@@ -48,9 +48,14 @@ var squareMetreMore;
 var form1;
 $(document).ready(function()
 {
-    //$(".remove-area").hide();
+    $(".remove-area").hide();
     form1 = $("#Estimate-Ready").parsley();
     
+	$("a[data-ix='question-1']").click(function()
+	{
+		console.log("asdads");
+	});
+	
 	$("#get-quote-estimate").click(function(e)
 	{
 		$("#Estimate-Ready").submit();

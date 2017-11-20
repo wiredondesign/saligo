@@ -77,7 +77,7 @@ $(document).ready(function()
 	{
 		setTimeout(function()
 		{
-			if($("#wf-form-Area-Coverage input:empty").length != 0)
+			if($('#wf-form-Area-Coverage input').filter(function(){ return !$(this).val();}).length != 0)
 			{
 				$("a[data-ix='q4-prev']").click();
 			}

@@ -53,8 +53,13 @@ $(document).ready(function()
     
 	$("a[data-ix='question-1']").click(function()
 	{
-		console.log("asdads");
-		return false;
+		setTimeout(function()
+		{
+			if($("#wf-form-customer-type input[type=radio]:checked").length == 0)
+			{
+				$("a[data-ix='q2-prev']").click();
+			}
+		},100);
 	});
 	
 	$("#get-quote-estimate").click(function(e)

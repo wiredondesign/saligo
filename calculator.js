@@ -73,6 +73,51 @@ $(document).ready(function()
 		},100);
 	});
 	
+	$("a[data-ix='q3-next']").click(function()
+	{
+		setTimeout(function()
+		{
+			if($("#wf-form-Area-Coverage input:empty").length == 0)
+			{
+				$("a[data-ix='q4-prev']").click();
+			}
+		},100);
+	});
+	
+	$("a[data-ix='q4-next']").click(function()
+	{
+		setTimeout(function()
+		{
+			if($("#Panel-Type input[type=radio]:checked").length == 0)
+			{
+				$("a[data-ix='q5-prev']").click();
+			}
+		},100);
+	});
+	
+	$("a[data-ix='q6-next']").click(function()
+	{
+		setTimeout(function()
+		{
+			if($("#wf-form-Toughening-Form input[type=radio]:checked").length == 0)
+			{
+				$("a[data-ix='q7-prev']").click();
+			}
+		},100);
+	});
+	
+	$("a[data-ix='quote-ready-show']").click(function()
+	{
+		setTimeout(function()
+		{
+			if($("#Delivery-Form input[type=radio]:checked").length == 0)
+			{
+				$(".quote-ready").hide();
+				$(".question-8").show();
+			}
+		},100);
+	});
+	
 	$("#get-quote-estimate").click(function(e)
 	{
 		$("#Estimate-Ready").submit();

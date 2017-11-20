@@ -80,7 +80,7 @@ $(document).ready(function()
             phone : $("#quote-phone").val(),
             email : $("#quote-email").val(),
             
-			wantACallBack:($("#yes-call-2:checked").length > 0) ? "Yes" : "No",
+	    wantACallBack:($("#yes-call-2:checked").length > 0) ? "Yes" : "No",
             
             customerType : $("#wf-form-customer-type input[type=radio]:checked").parent().find("label").text(),
             requireToughening : $("#wf-form-Toughening-Form input[type=radio]:checked").parent().find("label").text(),
@@ -122,6 +122,14 @@ $(document).ready(function()
         return false;
     });
     
+   $("#yes-call-2").click(function () {
+
+    //disable the submit button
+	    $("#yes-call-2").attr("disabled", true);
+	    $("#no-call-2").attr("disabled", true);
+
+       return true;
+    });
     
     $("#trade-customer, #private-customer").change(function()
     {

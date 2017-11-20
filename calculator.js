@@ -77,7 +77,7 @@ $(document).ready(function()
 	{
 		setTimeout(function()
 		{
-			if($("#wf-form-Area-Coverage input:empty").length == 0)
+			if($("#wf-form-Area-Coverage input:empty").length != 0)
 			{
 				$("a[data-ix='q4-prev']").click();
 			}
@@ -189,13 +189,21 @@ $(document).ready(function()
         return false;
     });
     
-   $("#yes-call-2").click(function () {
-
-    //disable the submit button
-	    $("#yes-call-2").attr("disabled", true);
+   $("#yes-call-2, #no-call-2").click(function ()
+   {
+		$("#yes-call-2").attr("disabled", true);
 	    $("#no-call-2").attr("disabled", true);
-
-       return true;
+		$("#call-back-area").hide();
+		$(".contact-message").show();
+		
+		if($("#yes-call-2:checked").length)
+		{
+			$(".no-contact").hide();
+		}
+		else
+		{
+			$("#yes-contact").hide();
+		}
     });
     
     $("#trade-customer, #private-customer").change(function()

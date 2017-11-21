@@ -95,6 +95,31 @@ $(document).ready(function()
 		},100);
 	});
 	
+	$(".q5-next").click(function()
+	{
+		$("#no-toughening").prop("checked", true);
+		setTimeout(function()
+		{
+			if(productType != "vintage" && productType != "mottled" && productType != "speckled" && productType != "mercury")
+			{
+				$(".q6-next").trigger("click");
+			}
+		},100);
+	});
+	
+	$(".q7-prev").click(function()
+	{
+		setTimeout(function()
+		{
+			if(productType != "vintage" && productType != "mottled" && productType != "speckled" && productType != "mercury")
+			{
+				$(".q6-prev").trigger("click");
+			}
+		},100);
+	});
+	
+	
+	
 	$("a[data-ix='q6-next']").click(function()
 	{
 		setTimeout(function()
@@ -192,7 +217,7 @@ $(document).ready(function()
      
    $("#yes-call-2, #no-call-2").click(function ()
    {
-	$("#yes-call-2").attr("disabled", true);
+		$("#yes-call-2").attr("disabled", true);
 	    $("#no-call-2").attr("disabled", true);
 		$("#call-back-area").hide();
 		$(".contact-message").show();
@@ -266,6 +291,10 @@ $(document).ready(function()
 		if($("#yes-call-2:checked").length > 0)
 		{
 			$("#Estimate-Ready").submit();
+			setTimeout(function()
+			{
+				window.reload();
+			},1000);
 		}
 	});
 });

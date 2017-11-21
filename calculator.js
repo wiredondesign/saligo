@@ -296,6 +296,10 @@ $(document).ready(function()
 				window.reload();
 			},1000);
 		}
+		else
+		{
+			window.reload();
+		}
 	});
 });
 

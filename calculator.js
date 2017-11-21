@@ -97,7 +97,7 @@ $(document).ready(function()
 	
 	$(".q5-next").click(function()
 	{
-		$("#no-toughening").prop("checked", true);
+		$("#no-toughening-2").prop("checked", true);
 		setTimeout(function()
 		{
 			if(productType != "vintage" && productType != "mottled" && productType != "speckled" && productType != "mercury")
@@ -198,7 +198,7 @@ $(document).ready(function()
             cornerCutTotal : cornerCutTotal,
             holeSocket610Total : holeSocket610Total,
             holeSocket1149Total : holeSocket1149Total,
-            grandTotal : grandTotal,
+            grandTotal : grandTotal.toFixed(2),
         };
         
         $.ajax(

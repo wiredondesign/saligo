@@ -189,9 +189,9 @@ $(document).ready(function()
         return false;
     });
     
-   $("#yes-call-2, #no-call-2").click(function ()
+   $("#yes-call-2:checked, #no-call-2:checked").length(function ()
    {
-		$("#yes-call-2").attr("disabled", true);
+	$("#yes-call-2").attr("disabled", true);
 	    $("#no-call-2").attr("disabled", true);
 		$("#call-back-area").hide();
 		$(".contact-message").show();

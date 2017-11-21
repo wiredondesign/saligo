@@ -293,12 +293,12 @@ $(document).ready(function()
 			$("#Estimate-Ready").submit();
 			setTimeout(function()
 			{
-				window.reload();
+				window.location.reload();
 			},1000);
 		}
 		else
 		{
-			window.reload();
+				window.location.reload();
 		}
 	});
 });

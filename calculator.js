@@ -215,7 +215,7 @@ $(document).ready(function()
     });
     
      
-   $("#yes-call-2, #no-call-2").click(function ()
+   $("#yes-call, #no-call").click(function ()
    {
 		$("#yes-call-2").attr("disabled", true);
 	    $("#no-call-2").attr("disabled", true);

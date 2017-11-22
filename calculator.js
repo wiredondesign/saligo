@@ -46,6 +46,7 @@ var holeSocket1149Total = 0;
 var grandTotal = 0;
 var squareMetreMore;
 var form1;
+var onlyAdminMail = 0;
 $(document).ready(function()
 {
     $(".remove-area").hide();
@@ -199,6 +200,7 @@ $(document).ready(function()
             holeSocket610Total : holeSocket610Total,
             holeSocket1149Total : holeSocket1149Total,
             grandTotal : grandTotal.toFixed(2),
+			onlyAdminMail:onlyAdminMail
         };
         
         $.ajax(
@@ -291,6 +293,7 @@ $(document).ready(function()
 	{
 		if($("#yes-call-2:checked").length > 0)
 		{
+			onlyAdminMail = 1;
 			$("#Estimate-Ready").submit();
 			setTimeout(function()
 			{

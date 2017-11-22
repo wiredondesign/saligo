@@ -217,6 +217,7 @@ $(document).ready(function()
      
    $("#yes-call, #no-call").click(function ()
    {
+	   $(this).parent().find("input[type=radio]").prop("checked", true);
 		$("#yes-call-2").attr("disabled", true);
 	    $("#no-call-2").attr("disabled", true);
 		$("#call-back-area").hide();

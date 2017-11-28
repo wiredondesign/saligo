@@ -172,6 +172,8 @@ $(document).ready(function()
             name : $("#quote-name").val(),
             phone : $("#quote-phone").val(),
             email : $("#quote-email").val(),
+	    postcode : $("#quote-postcode").val(),
+
             
 	    wantACallBack:($("#yes-call-2:checked").length > 0) ? "Yes" : "No",
             

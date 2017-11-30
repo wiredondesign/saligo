@@ -9,11 +9,11 @@ var productList =
     "byzantine" : 570,
     "azzuro" : 520,
     "umbria" : 570,
-    "tuscana" : 0,
+    "tuscana" : 570,
     "bronze marbled" : 420,
     "marbled" : 420,
     "speckled" : 810,
-    "rosetta" : 0,
+    "rosetta" : 570,
     "mottled" : 810,
     "assisi" : 658,
 };

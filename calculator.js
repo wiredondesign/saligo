@@ -1,3 +1,24 @@
+var isMobile = {
+    Android: function() {
+	return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+	return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+	return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+	return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+	return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+	return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+
 var productList = 
 {
     "vintage" : 810,
@@ -275,6 +296,10 @@ $(document).ready(function()
     
     $(".add-area-btn").click(function()
     {
+	    if(isMobile.any()){
+	    	alert("Please view our website on a desktop if you wish to add more areas.");
+		    return false;
+	    }
         $("#wf-form-Area-Coverage").append('<div class="area-row-item row-11 w-row"><div class="column-12 w-col w-col-6"><h3 class="area-title">Width</h3><input type="text" class="text-field w-input" maxlength="256" name="width" data-name="width" placeholder="0 (width)" id="width" required=""><div class="in-mm-txt">in millimetres (mm)</div></div><div class="w-col w-col-5"><h3 class="area-title">Height</h3><input type="text" class="text-field w-input" maxlength="256" name="height" data-name="height" placeholder="0 (height)" id="height" required=""><div class="row-10 w-row"><div class="w-col w-col-6"><div class="in-mm-mobile in-mm-txt">in millimetres (mm)</div></div><div class="column-13 w-col w-col-6"><a href="#" class="remove-area remove-area-mobile w-inline-block"></a></div></div></div><div class="column-11 w-col w-col-1"><a href="#" class="remove-area w-inline-block"></a></div></div>');
     });
     

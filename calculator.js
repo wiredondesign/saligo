@@ -149,6 +149,7 @@ $(document).ready(function()
 		{
 			if(productType != "vintage" && productType != "mottled" && productType != "speckled" && productType != "mercury")
 			{
+				$(".q6-next").trigger("touchstart");
 				$(".q6-next").trigger("click");
 			}
 		},100);
@@ -160,6 +161,7 @@ $(document).ready(function()
 		{
 			if(productType != "vintage" && productType != "mottled" && productType != "speckled" && productType != "mercury")
 			{
+				$(".q6-prev").trigger("touchstart");
 				$(".q6-prev").trigger("click");
 			}
 		},100);
@@ -285,31 +287,37 @@ $(document).ready(function()
     
     $("#trade-customer, #private-customer").change(function()
     {
-        $(".q1-next").trigger("click");
+        $(".q1-next").trigger("touchstart");
+	    $(".q1-next").trigger("click");
     });
     
     $("#kitchen-splashback, #wall-feature, #bathroom, #restaurant-type-2, #joinery, #hotel, #exterior, #retail, #artwork, #other").change(function()
     {
+        $(".q2-next").trigger("touchstart");
         $(".q2-next").trigger("click");
     });
     
     $("#single-panel-2, #mutiple-panel-2, #tiled-panel-2, #abstract-panel-2").change(function()
     {
+        $(".q4-next").trigger("touchstart");
         $(".q4-next").trigger("click");
     });
     
     $("#polished-edge-2, #bevelled-edge-2, #radio-20").change(function()
     {
+        $(".q5-next").trigger("touchstart");
         $(".q5-next").trigger("click");
     });
     
     $("#yes-toughening-2, #no-toughening-2").change(function()
     {
+        $(".q6-next").trigger("touchstart");
         $(".q6-next").trigger("click");
     });
     
     $("#delivery-only-2, #delivery-install-2, #collection-2").change(function()
     {
+        $(".q8-next").trigger("touchstart");
         $(".q8-next").trigger("click");
     });
     

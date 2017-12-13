@@ -294,7 +294,7 @@ $(document).ready(function()
         calculateQuote();
     });
     
-    $(".add-area-btn").click(function()
+    $("#add-another-area").click(function()
     {
 	    if(isMobile.any()){
 	    	alert("If you wish to add more areas, please view our website on a PC/Laptop.");

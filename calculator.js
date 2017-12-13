@@ -19,6 +19,31 @@ var isMobile = {
     }
 };
 
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+var typeStyle = getParameterByName("t");
+
+if(typeStyle != '')
+{
+	clickOnImage(typeStyle);
+}
+
+function clickOnImage(typeStyle)
+{
+setTimeout(function()
+{
+	$(".original-v-colour").find("img[data-ix='"+ typeStyle +"']").click();
+},1000);
+}
+
 var productList = 
 {
     "vintage" : 810,

@@ -371,7 +371,7 @@ $(document).ready(function()
 		}
 	});
 	
-	$("#end-quote-mobile").on("click", function()
+	$(".end-quote-mobile").on("click", function()
 	{
 		if($("#yes-call-2:checked").length > 0)
 		{

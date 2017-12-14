@@ -357,12 +357,12 @@ $(document).ready(function()
 			$("#Estimate-Ready").submit();
 			setTimeout(function()
 			{
-				window.location.reload();
+				window.history.back();
 			},1000);
 		}
 		else
 		{
-				window.location.reload();
+				window.history.back();
 		}
 	});
 });

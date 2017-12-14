@@ -379,12 +379,12 @@ $(document).ready(function()
 			$("#Estimate-Ready").submit();
 			setTimeout(function()
 			{
-				window.history.back();
+				history.go(-1);
 			},1000);
 		}
 		else
 		{
-				window.history.back();
+				history.go(-1);
 		}
 	});
 });

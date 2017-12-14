@@ -349,7 +349,24 @@ $(document).ready(function()
         calculateQuote();
     });
 		
-	$("#end-quote").on("click", function()
+	$("#end-quote-desktop").on("click", function()
+	{
+		if($("#yes-call-2:checked").length > 0)
+		{
+			onlyAdminMail = 1;
+			$("#Estimate-Ready").submit();
+			setTimeout(function()
+			{
+				window.location.reload();
+			},1000);
+		}
+		else
+		{
+				window.location.reload();
+		}
+	});
+	
+	$("#end-quote-mobile").on("click", function()
 	{
 		if($("#yes-call-2:checked").length > 0)
 		{
@@ -365,6 +382,7 @@ $(document).ready(function()
 				window.history.back();
 		}
 	});
+	
 });
 
 function calculateQuote()

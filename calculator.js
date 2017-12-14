@@ -64,9 +64,9 @@ var productList =
     "assisi" : 658,
 };
 
-if (typeof productType === undefined)
+if (typeof productType == "undefined")
 {
-	productType = getParameterByName("t");
+	productType = getParameterByName("productType");
 }
 
 var productPrice = productList[productType];

@@ -64,6 +64,11 @@ var productList =
     "assisi" : 658,
 };
 
+if (typeof productType === undefined)
+{
+	productType = getParameterByName("t");
+}
+
 var productPrice = productList[productType];
 
 var edgingPriceArray =
@@ -382,7 +387,6 @@ $(document).ready(function()
 				window.history.back();
 		}
 	});
-	
 });
 
 function calculateQuote()

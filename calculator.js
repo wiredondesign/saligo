@@ -134,9 +134,12 @@ $(document).ready(function()
 		setTimeout(function()
 		{
 			var blank = false;
-			$('#wf-form-Area-Coverage input:visible').each(function(){
+			$('#wf-form-Area-Coverage input:visible').each(function()
+			{
 				if($(this).val()=='')
-				blank = true;
+				{
+					blank = true;
+				}
 			});
 			if(blank)
 			{

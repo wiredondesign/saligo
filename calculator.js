@@ -114,6 +114,7 @@ $(document).ready(function()
 				$("a[data-ix='q2-prev']").trigger("touchstart");
 				$("a[data-ix='q2-prev']").trigger("click");
 			}
+			scrollTp();
 		},100);
 	});
 	
@@ -126,6 +127,7 @@ $(document).ready(function()
 				$("a[data-ix='q3-prev']").trigger("touchstart");
 				$("a[data-ix='q3-prev']").trigger("click");
 			}
+			scrollTp();
 		},100);
 	});
 	
@@ -147,6 +149,7 @@ $(document).ready(function()
 				$("a[data-ix='q4-prev']").trigger("touchstart");
 				$("a[data-ix='q4-prev']").trigger("click");
 			}
+			scrollTp();
 		},100);
 	});
 	
@@ -159,6 +162,7 @@ $(document).ready(function()
 				$("a[data-ix='q5-prev']").trigger("touchstart");
 				$("a[data-ix='q5-prev']").trigger("click");
 			}
+			scrollTp();
 		},100);
 	});
 	
@@ -172,6 +176,7 @@ $(document).ready(function()
 				$(".q6-next").trigger("touchstart");
 				$(".q6-next").trigger("click");
 			}
+			scrollTp();
 		},100);
 	});
 	
@@ -184,6 +189,7 @@ $(document).ready(function()
 				$(".q6-prev").trigger("touchstart");
 				$(".q6-prev").trigger("click");
 			}
+			scrollTp();
 		},100);
 	});
 	
@@ -198,6 +204,7 @@ $(document).ready(function()
 				$("a[data-ix='q7-prev']").trigger("touchstart");
 				$("a[data-ix='q7-prev']").trigger("click");
 			}
+			scrollTp();
 		},100);
 	});
 	
@@ -492,4 +499,9 @@ function calculateQuote()
 		grandTotal = 0;
 	}
     $("#quote-price").text("£" + grandTotal.toFixed(2));
+}
+
+function scrollTp()
+{
+	$("html, body").animate({ scrollTop: 0 }, "slow");
 }

@@ -67,7 +67,7 @@ var productList =
 
 if (typeof productType == "undefined")
 {
-	productType = getParameterByName("productType");
+	productType = getParameterByName("t");
 }
 
 var productPrice = productList[productType];

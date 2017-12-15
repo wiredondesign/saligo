@@ -20,17 +20,6 @@ var isMobile = {
 };
 
 
-$(document).on('focus', 'input, textarea', function() 
-{
-	alert("YES!!");
-
-});
-
-$(document).on('blur', 'input, textarea', function() 
-{
-	alert("NO!!");
-});
-
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");

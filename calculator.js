@@ -41,7 +41,8 @@ function clickOnImage(typeStyle)
 {
 setTimeout(function()
 {
-	$(".original-v-colour").find("img[data-ix='"+ typeStyle +"']").click();
+	$(".original-v-colour").find("img[data-ix='"+ typeStyle +"']").trigger("touchstart");
+	$(".original-v-colour").find("img[data-ix='"+ typeStyle +"']").trigger("click");
 },1000);
 }
 
@@ -110,7 +111,8 @@ $(document).ready(function()
 		{
 			if($("#wf-form-customer-type input[type=radio]:checked").length == 0)
 			{
-				$("a[data-ix='q2-prev']").click();
+				$("a[data-ix='q2-prev']").trigger("touchstart");
+				$("a[data-ix='q2-prev']").trigger("click");
 			}
 		},100);
 	});
@@ -121,7 +123,8 @@ $(document).ready(function()
 		{
 			if($("#wf-form-project-type input[type=radio]:checked").length == 0)
 			{
-				$("a[data-ix='q3-prev']").click();
+				$("a[data-ix='q3-prev']").trigger("touchstart");
+				$("a[data-ix='q3-prev']").trigger("click");
 			}
 		},100);
 	});
@@ -132,7 +135,8 @@ $(document).ready(function()
 		{
 			if($('#wf-form-Area-Coverage input').filter(function(){ return !$(this).val();}).length != 0)
 			{
-				$("a[data-ix='q4-prev']").click();
+				$("a[data-ix='q4-prev']").trigger("touchstart");
+				$("a[data-ix='q4-prev']").trigger("click");
 			}
 		},100);
 	});
@@ -143,7 +147,8 @@ $(document).ready(function()
 		{
 			if($("#Panel-Type input[type=radio]:checked").length == 0)
 			{
-				$("a[data-ix='q5-prev']").click();
+				$("a[data-ix='q5-prev']").trigger("touchstart");
+				$("a[data-ix='q5-prev']").trigger("click");
 			}
 		},100);
 	});
@@ -181,7 +186,8 @@ $(document).ready(function()
 		{
 			if($("#wf-form-Toughening-Form input[type=radio]:checked").length == 0)
 			{
-				$("a[data-ix='q7-prev']").click();
+				$("a[data-ix='q7-prev']").trigger("touchstart");
+				$("a[data-ix='q7-prev']").trigger("click");
 			}
 		},100);
 	});

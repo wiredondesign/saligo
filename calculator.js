@@ -133,7 +133,13 @@ $(document).ready(function()
 	{
 		setTimeout(function()
 		{
-			if($('#wf-form-Area-Coverage input').filter(function(){ return !$(this).val();}).length != 0)
+			var blank = false;
+			$('#wf-form-Area-Coverage input').each(function(){
+				if($(this).val()=='')
+				blank = true;
+			});
+			
+			if(blank)
 			{
 				$("a[data-ix='q4-prev']").trigger("touchstart");
 				$("a[data-ix='q4-prev']").trigger("click");

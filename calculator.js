@@ -136,9 +136,9 @@ $(document).ready(function()
 		setTimeout(function()
 		{
 			var blank = false;
-			$('#wf-form-Area-Coverage input').each(function()
+			$('#wf-form-Area-Coverage input:visible').each(function()
 			{
-				if($(this).css("display")=='block' && $(this).is("visible") && $(this).val()=='')
+				if ($(this).val()=='')
 				{
 					blank = true;
 				}

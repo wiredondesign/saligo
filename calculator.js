@@ -250,40 +250,41 @@ $(document).ready(function()
 	
     $("#Estimate-Ready").submit(function()
     {
+		var productName = productType;
+		if(productType != getParameterByName("t"))
+		{
+			var productName = productType + " (" + getParameterByName("t") + ")";
+		}
+		
         postData = {
-            name : $("#quote-name").val(),
-            phone : $("#quote-phone").val(),
-            email : $("#quote-email").val(),
-	    postcode : $("#quote-postcode").val(),
-
-            
-	    wantACallBack:($("#yes-call-2:checked").length > 0) ? "Yes" : "No",
-            
-            customerType : $("#wf-form-customer-type input[type=radio]:checked").parent().find("label").text(),
-            requireToughening : $("#wf-form-Toughening-Form input[type=radio]:checked").parent().find("label").text(),
-            projectType : $("#wf-form-project-type input[type=radio]:checked").parent().find(".type-txt").text(),
-            panels : $("#Panel-Type input[type=radio]:checked").parent().find(".type-txt").text(),
-            edging : $("#Edging-Type input[type=radio]:checked").parent().find(".type-txt").text(),
-            delivery_installation : $("#Delivery-Form input[type=radio]:checked").parent().find(".type-txt").text(),
-            
-            socket_number : $("#sockets").val(),
-            corner_number : $("#corners").val(),
-            hole_socket : $("#holes-small").val(),
-            hole_cutout : $("#holes-large").val(),
-            
-            width : totalCoverageWidth,
-            height : totalCoverageHeight,
-            productPrice : productPrice,
-            product : productType,
-            squareMetre : squareMetre,
-            squareMetrePrice : squareMetrePrice,
-            tougheningTotal : tougheningTotal,
-            edgingTotal : edgingTotal,
-            socketCutTotal : socketCutTotal,
-            cornerCutTotal : cornerCutTotal,
-            holeSocket610Total : holeSocket610Total,
-            holeSocket1149Total : holeSocket1149Total,
-            grandTotal : grandTotal.toFixed(2),
+			name : $("#quote-name").val(),
+			phone : $("#quote-phone").val(),
+			email : $("#quote-email").val(),
+			postcode : $("#quote-postcode").val(),
+			wantACallBack:($("#yes-call-2:checked").length > 0) ? "Yes" : "No",
+			customerType : $("#wf-form-customer-type input[type=radio]:checked").parent().find("label").text(),
+			requireToughening : $("#wf-form-Toughening-Form input[type=radio]:checked").parent().find("label").text(),
+			projectType : $("#wf-form-project-type input[type=radio]:checked").parent().find(".type-txt").text(),
+			panels : $("#Panel-Type input[type=radio]:checked").parent().find(".type-txt").text(),
+			edging : $("#Edging-Type input[type=radio]:checked").parent().find(".type-txt").text(),
+			delivery_installation : $("#Delivery-Form input[type=radio]:checked").parent().find(".type-txt").text(),
+			socket_number : $("#sockets").val(),
+			corner_number : $("#corners").val(),
+			hole_socket : $("#holes-small").val(),
+			hole_cutout : $("#holes-large").val(),
+			width : totalCoverageWidth,
+			height : totalCoverageHeight,
+			productPrice : productPrice,
+			product : productName,
+			squareMetre : squareMetre,
+			squareMetrePrice : squareMetrePrice,
+			tougheningTotal : tougheningTotal,
+			edgingTotal : edgingTotal,
+			socketCutTotal : socketCutTotal,
+			cornerCutTotal : cornerCutTotal,
+			holeSocket610Total : holeSocket610Total,
+			holeSocket1149Total : holeSocket1149Total,
+			grandTotal : grandTotal.toFixed(2),
 			onlyAdminMail:onlyAdminMail
         };
         

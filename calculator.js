@@ -111,6 +111,7 @@ $(document).ready(function()
 		{
 			if($("#wf-form-customer-type input[type=radio]:checked").length == 0)
 			{
+				alert("Please select customer type.");
 				$("a[data-ix='q2-prev']").trigger("touchstart");
 				$("a[data-ix='q2-prev']").trigger("click");
 			}
@@ -124,6 +125,7 @@ $(document).ready(function()
 		{
 			if($("#wf-form-project-type input[type=radio]:checked").length == 0)
 			{
+				alert("Please select project type.");
 				$("a[data-ix='q3-prev']").trigger("touchstart");
 				$("a[data-ix='q3-prev']").trigger("click");
 			}
@@ -145,6 +147,7 @@ $(document).ready(function()
 			});
 			if(blank)
 			{
+				alert("Please fill in all the fields or delete an area by pressing the red button.");
 				$("a[data-ix='q4-prev']").trigger("touchstart");
 				$("a[data-ix='q4-prev']").trigger("click");
 			}
@@ -158,6 +161,7 @@ $(document).ready(function()
 		{
 			if($("#Panel-Type input[type=radio]:checked").length == 0)
 			{
+				alert("Please select panel type.");
 				$("a[data-ix='q5-prev']").trigger("touchstart");
 				$("a[data-ix='q5-prev']").trigger("click");
 			}
@@ -172,6 +176,7 @@ $(document).ready(function()
 		{
 			if(productType != "vintage" && productType != "mottled" && productType != "speckled" && productType != "mercury")
 			{
+				alert("Please select glass toughening.");
 				$(".q6-next").trigger("touchstart");
 				$(".q6-next").trigger("click");
 			}
@@ -185,6 +190,7 @@ $(document).ready(function()
 		{
 			if(productType != "vintage" && productType != "mottled" && productType != "speckled" && productType != "mercury")
 			{
+				alert("Please select glass toughening.");
 				$(".q6-prev").trigger("touchstart");
 				$(".q6-prev").trigger("click");
 			}

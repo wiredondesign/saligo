@@ -138,7 +138,7 @@ $(document).ready(function()
 			var blank = false;
 			$('#wf-form-Area-Coverage input').each(function()
 			{
-				if($(this).css("display")=='block' && $(this).val()=='')
+				if($(this).css("display")=='block' && $(this).is("visible") && $(this).val()=='')
 				{
 					blank = true;
 				}

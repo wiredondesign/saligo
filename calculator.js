@@ -106,15 +106,8 @@ $(document).ready(function()
     form1 = $("#Estimate-Ready").parsley();
     
 	
-	$('#wf-form-Area-Coverage input').on("input",function(evt)
-	{
-		evt = (evt) ? evt : window.event;
-		var charCode = (evt.which) ? evt.which : evt.keyCode;
-		if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-			return false;
-		}
-		return true;
-	});
+	$('#wf-form-Area-Coverage').on('keydown', 'input', function(e){-1!==$.inArray(e.keyCode,[46,8,9,27,13,110,190])||(/65|67|86|88/.test(e.keyCode)&&(e.ctrlKey===true||e.metaKey===true))&&(!0===e.ctrlKey||!0===e.metaKey)||35<=e.keyCode&&40>=e.keyCode||(e.shiftKey||48>e.keyCode||57<e.keyCode)&&(96>e.keyCode||105<e.keyCode)&&e.preventDefault()});
+	
 	
 	$("a[data-ix='question-1']").click(function()
 	{

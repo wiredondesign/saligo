@@ -171,7 +171,7 @@ $(document).ready(function()
 	
 	$(".q5-next").click(function()
 	{
-		$("#no-toughening-2").prop("checked", true);
+		//$("#no-toughening-2").prop("checked", true);
 		setTimeout(function()
 		{
 			if(productType != "vintage" && productType != "mottled" && productType != "speckled" && productType != "mercury")

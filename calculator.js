@@ -109,6 +109,7 @@ $(document).ready(function()
 	$("#corners").val(0);
 	$("#holes-small").val(0);
 	$("#holes-large").val(0);
+	
 
     form1 = $("#Estimate-Ready").parsley();	
 	

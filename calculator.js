@@ -437,7 +437,7 @@ function calculateQuote()
 	console.log("Width: " + totalCoverageWidth);
 	console.log("Height: " + totalCoverageHeight);
 	console.log("Square Metre: " + squareMetre);
-	console.log("SQ Price: " + squareMetrePrice);;
+	console.log("SQ Price: " + squareMetrePrice);
 	console.log("Toughening: " + tougheningTotal);
 	console.log("Edging: " + edgingTotal);
 	console.log("Socket Cut: " + socketCutTotal);

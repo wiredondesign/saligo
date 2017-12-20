@@ -100,13 +100,15 @@ var grandTotal = 0;
 var squareMetreMore;
 var form1;
 var onlyAdminMail = 0;
+var regex=/^[0-9]+$/;
+
 $(document).ready(function()
 {
     $(".remove-area").hide();
     form1 = $("#Estimate-Ready").parsley();
     
 	
-	$('#wf-form-Area-Coverage, #Glass-Processing-Form').on('input', 'input', function(e){-1!==$.inArray(e.keyCode,[46,8,9,27,13,110,190])||(/65|67|86|88/.test(e.keyCode)&&(e.ctrlKey===true||e.metaKey===true))&&(!0===e.ctrlKey||!0===e.metaKey)||35<=e.keyCode&&40>=e.keyCode||(e.shiftKey||48>e.keyCode||57<e.keyCode)&&(96>e.keyCode||105<e.keyCode)&&e.preventDefault()});
+	/*$('#wf-form-Area-Coverage, #Glass-Processing-Form').on('keydown', 'input', function(e){-1!==$.inArray(e.keyCode,[46,8,9,27,13,110,190])||(/65|67|86|88/.test(e.keyCode)&&(e.ctrlKey===true||e.metaKey===true))&&(!0===e.ctrlKey||!0===e.metaKey)||35<=e.keyCode&&40>=e.keyCode||(e.shiftKey||48>e.keyCode||57<e.keyCode)&&(96>e.keyCode||105<e.keyCode)&&e.preventDefault()});*/
 	
 	
 	$("a[data-ix='question-1']").click(function()
@@ -142,19 +144,36 @@ $(document).ready(function()
 		setTimeout(function()
 		{
 			var blank = false;
+			var numberOnly = true;
+			
 			$('#wf-form-Area-Coverage input').each(function()
 			{
 				if($(this).css("display")=='block' && $(this).parent().css("display")=='block' && $(this).val()=='')
 				{
 					blank = true;
 				}
+				if(!$(this).val().match(regex))
+				{
+					numberOnly = false;
+				}
 			});
+			
 			if(blank)
 			{
 				$("a[data-ix='q4-prev']").trigger("touchstart");
 				$("a[data-ix='q4-prev']").trigger("click");
 				alert("Please fill in all the fields or delete an area by pressing the red button.");
 			}
+			
+			if(numberOnly)
+			{
+				$("a[data-ix='q4-prev']").trigger("touchstart");
+				$("a[data-ix='q4-prev']").trigger("click");
+				alert("The area coverage input must be only numbers");
+			}
+			
+			
+			
 			scrollTp();
 		},100);
 	});

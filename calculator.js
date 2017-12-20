@@ -433,6 +433,20 @@ function calculateQuote()
     holeSocket610Total = 0;
     holeSocket1149Total = 0;
     grandTotal = 0;
+	
+	console.log(totalCoverageWidth);
+	console.log(totalCoverageHeight);
+	console.log(squareMetre);
+	console.log(squareMetrePrice);
+	console.log(tougheningTotal);
+	console.log(edgingTotal);
+	console.log(socketCutTotal);
+	console.log(edgingTotal);
+	console.log(cornerCutTotal);
+	console.log(holeSocket610Total);
+	console.log(holeSocket1149Total);
+	console.log(grandTotal);	
+	
     
     // new calculation of square metre
 

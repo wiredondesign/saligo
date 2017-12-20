@@ -193,7 +193,7 @@ $(document).ready(function()
 			{
 				$(".q6-prev").trigger("touchstart");
 				$(".q6-prev").trigger("click");
-				alert("Please select glass toughening.");
+				//alert("Please select glass toughening.");
 			}
 			scrollTp();
 		},100);

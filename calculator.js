@@ -211,23 +211,26 @@ $(document).ready(function()
 	
 	$(".q7-next").click(function()
 	{
-		var numberOnly = true;
-		var sockets = $("#sockets").val();
-		var corners = $("#corners").val();
-		var holesSmall = $("#holes-small").val();
-		var holesLarge = $("#holes-large").val();
-		
-		if(!regex.test(sockets) || !regex.test(corners) || !regex.test(holesSmall) || !regex.test(holesLarge))
+		setTimeout(function()
 		{
-			numberOnly = false;
-		}
-		
-		if(!numberOnly)
-		{
-			$(".quote-ready").hide();
-			$(".question-7").show();
-			alert("The glass processing detail input must be only numbers");
-		}
+			var numberOnly = true;
+			var sockets = $("#sockets").val();
+			var corners = $("#corners").val();
+			var holesSmall = $("#holes-small").val();
+			var holesLarge = $("#holes-large").val();
+			
+			if(!regex.test(sockets) || !regex.test(corners) || !regex.test(holesSmall) || !regex.test(holesLarge))
+			{
+				numberOnly = false;
+			}
+			
+			if(!numberOnly)
+			{
+				$(".quote-ready").hide();
+				$(".question-7").show();
+				alert("The glass processing detail input must be only numbers");
+			}
+		},100);
 	});
 	
 	$(".q7-prev").click(function()

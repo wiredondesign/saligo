@@ -179,7 +179,7 @@ $(document).ready(function()
 			{
 				$(".q6-next").trigger("touchstart");
 				$(".q6-next").trigger("click");
-				alert("Please select glass toughening.");
+				//alert("Please select glass toughening.");
 			}
 			scrollTp();
 		},100);

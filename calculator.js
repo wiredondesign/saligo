@@ -152,7 +152,7 @@ $(document).ready(function()
 				{
 					blank = true;
 				}
-				if(!regex.text($(this).val()))
+				if(!regex.test($(this).val()))
 				{
 					numberOnly = false;
 				}

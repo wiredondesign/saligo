@@ -105,6 +105,11 @@ var regex=/^[0-9]+$/;
 $(document).ready(function()
 {
     $(".remove-area").hide();
+	$("#sockets").val(0);
+	$("#corners").val(0);
+	$("#holes-small").val(0);
+	$("#holes-large").val(0);
+
     form1 = $("#Estimate-Ready").parsley();	
 	
 	$("a[data-ix='question-1']").click(function()
@@ -160,8 +165,7 @@ $(document).ready(function()
 				$("a[data-ix='q4-prev']").trigger("click");
 				alert("Please fill in all the fields or delete an area by pressing the red button.");
 			}
-			
-			if(!numberOnly)
+			else if(!numberOnly)
 			{
 				$("a[data-ix='q4-prev']").trigger("touchstart");
 				$("a[data-ix='q4-prev']").trigger("click");
@@ -202,6 +206,27 @@ $(document).ready(function()
 			}
 			scrollTp();
 		},100);
+	});
+	
+	$(".q7-next").click(function()
+	{
+		var numberOnly = true;
+		var sockets = $("#sockets").val();
+		var corners = $("#corners").val();
+		var holesSmall = $("#holes-small").val();
+		var holesLarge = $("#holes-large").val();
+		
+		if(!regex.test(sockets) || !regex.test(corners) || !regex.test(holesSmall) || !regex.test(holesLarge))
+		{
+			numberOnly = false;
+		}
+		
+		if(!numberOnly)
+		{
+			$(".quote-ready").hide();
+			$(".question-7").show();
+			alert("The glass processing detail input must be only numbers");
+		}
 	});
 	
 	$(".q7-prev").click(function()

@@ -105,6 +105,17 @@ $(document).ready(function()
     $(".remove-area").hide();
     form1 = $("#Estimate-Ready").parsley();
     
+	
+	$('#wf-form-Area-Coverage input').on("input",function(evt)
+	{
+		evt = (evt) ? evt : window.event;
+		var charCode = (evt.which) ? evt.which : evt.keyCode;
+		if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+			return false;
+		}
+		return true;
+	});
+	
 	$("a[data-ix='question-1']").click(function()
 	{
 		setTimeout(function()
@@ -252,7 +263,7 @@ $(document).ready(function()
     $("#Estimate-Ready").submit(function()
     {
 		var productName = productType;
-		if(productType != getParameterByName("t"))
+		if(getParameterByName("t") != undefined && productType != getParameterByName("t"))
 		{
 			var productName = productType + " (" + getParameterByName("t") + ")";
 		}

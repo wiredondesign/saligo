@@ -339,7 +339,7 @@ $(document).ready(function()
         
         $.ajax(
         {
-            url: "http://wiredondesign.co.uk/saligo/all-styles/inc/ajaxSubmit.php",
+            url: "https://wiredondesign.co.uk/saligo/all-styles/inc/ajaxSubmit.php",
             type:"POST",
             data:postData,
             dataType:"jsonp",

@@ -430,7 +430,7 @@ $(document).ready(function()
     {
         var newType = productList[$(this).val()];
         productType = $(this).val();
-		productPrice = newType;
+	productPrice = newType;
         calculateQuote();
     });
 		

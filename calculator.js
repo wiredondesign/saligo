@@ -55,7 +55,7 @@ var productList =
     "madarperia" : 670,
     "fumata" : 570,
     "byzantine" : 570,
-    "azzuro" : 520,
+    "azzurro" : 520,
     "umbria" : 570,
     "tuscana" : 570,
     "bronze marbled" : 420,

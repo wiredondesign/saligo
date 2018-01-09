@@ -60,7 +60,7 @@ var productList =
     "tuscana" : 570,
     "bronze marbled" : 420,
     "marbled" : 420,
-    "speckled" : 810,
+    "speckled" : 670,
     "rosetta" : 570,
     "mottled" : 810,
     "assisi" : 658,

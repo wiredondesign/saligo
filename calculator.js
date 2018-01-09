@@ -143,6 +143,7 @@ $(document).ready(function()
 	
 	$("a[data-ix='q3-next']").click(function()
 	{
+		$("#polished-edge-2").prop("checked", true);
 		setTimeout(function()
 		{
 			var blank = false;

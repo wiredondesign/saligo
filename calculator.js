@@ -196,14 +196,14 @@ $(document).ready(function()
 	
 	$(".q5-next").click(function()
 	{
-		//$("#no-toughening-2").prop("checked", true);
+		$("#no-toughening-2").prop("checked", true);
 		setTimeout(function()
 		{
 			if(productType != "vintage" && productType != "mottled" && productType != "speckled" && productType != "mercury")
 			{
 				$(".q6-next").trigger("touchstart");
 				$(".q6-next").trigger("click");
-				//alert("Please select glass toughening.");
+				alert("Please select glass toughening.");
 			}
 			scrollTp();
 		},100);

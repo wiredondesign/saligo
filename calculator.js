@@ -221,6 +221,12 @@ $(document).ready(function()
 		},100);
 	});
 	
+	$(".q6-prev").click(function()
+	{
+		$(".question-5").hide();
+		$(".question-4").show();
+	});
+	
 	$(".q7-next").click(function()
 	{
 		setTimeout(function()
@@ -243,23 +249,7 @@ $(document).ready(function()
 				alert("The glass processing detail input must be only numbers");
 			}
 		},100);
-	});
-	
-	$(".q7-prev").click(function()
-	{
-		setTimeout(function()
-		{
-			if(productType != "vintage" && productType != "mottled" && productType != "speckled" && productType != "mercury")
-			{
-				$(".q6-prev").trigger("touchstart");
-				$(".q6-prev").trigger("click");
-				//alert("Please select glass toughening.");
-			}
-			scrollTp();
-		},100);
-	});
-	
-	
+	});	
 	
 	$("a[data-ix='q6-next']").click(function()
 	{

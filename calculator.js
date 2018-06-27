@@ -185,6 +185,7 @@ $(document).ready(function()
 		$("#no-toughening-2").prop("checked", true);
 		$("#polished-edge-2").prop("checked", true);
 		
+		$(".question-5").hide();
 		$(".question-6").hide();
 		$(".question-7").show();
 		
@@ -212,6 +213,8 @@ $(document).ready(function()
 		{
 			if(productType != "vintage" && productType != "mottled" && productType != "speckled" && productType != "mercury")
 			{
+				$(".q5-next").trigger("touchstart");
+				$(".q5-next").trigger("click");
 				$(".q6-next").trigger("touchstart");
 				$(".q6-next").trigger("click");
 // 				alert("Please select glass toughening.");

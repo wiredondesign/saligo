@@ -294,8 +294,8 @@ $(document).ready(function()
 			//show the form again
 			setTimeout(function()
 			{
-				$(".quote-cost").hide();
 				$(".quote-ready").show();
+				$(".quote-cost").hide();
 			},100);
 		}
 		else

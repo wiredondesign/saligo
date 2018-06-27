@@ -294,8 +294,8 @@ $(document).ready(function()
 			//show the form again
 			setTimeout(function()
 			{
-				$(".quote-ready").show();
-				$(".quote-cost").hide();
+				//$(".quote-cost").hide();
+				//$(".quote-ready").show();
 			},100);
 		}
 		else
@@ -304,6 +304,7 @@ $(document).ready(function()
 			{
 				$(".quote-ready").hide();
 				$(".quote-cost").hide();
+				window.location.reload();
 			},100);
 		}
 	});

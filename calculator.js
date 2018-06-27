@@ -303,7 +303,7 @@ $(document).ready(function()
 			setTimeout(function()
 			{
 				$(".quote-ready").hide();
-				$(".quote-cost").show();
+				$(".quote-cost").hide();
 			},100);
 		}
 	});

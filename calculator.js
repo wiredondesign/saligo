@@ -43,6 +43,7 @@ setTimeout(function()
 {
 	$(".original-v-colour").find("img[data-ix='"+ typeStyle +"']").trigger("touchstart");
 	$(".original-v-colour").find("img[data-ix='"+ typeStyle +"']").trigger("click");
+	
 },1000);
 }
 

@@ -206,7 +206,7 @@ $(document).ready(function()
 		},100);
 	});
 	
-	$(".q5-next").click(function()
+	/*$(".q5-next").click(function()
 	{
 // 		$("#polished-edge-2").prop("checked", true);
 		setTimeout(function()
@@ -219,7 +219,7 @@ $(document).ready(function()
 			}
 			scrollTp();
 		},100);
-	});
+	});*/
 	
 	$(".q6-prev").click(function()
 	{

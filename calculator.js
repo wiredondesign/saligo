@@ -184,8 +184,10 @@ $(document).ready(function()
 	{
 		$("#no-toughening-2").prop("checked", true);
 		$("#polished-edge-2").prop("checked", true);
-		$(".question-4").hide();
-		$(".question-5").show();
+		
+		$(".question-5").hide();
+		$(".question-6").show();
+		
 		setTimeout(function()
 		{
 			if($("#Panel-Type input[type=radio]:checked").length == 0)
@@ -194,7 +196,12 @@ $(document).ready(function()
 				$("a[data-ix='q5-prev']").trigger("click");
 				alert("Please select panel type.");
 			}
+			
 			scrollTp();
+			
+			$(".question-5").hide();
+			$(".question-6").show();
+			
 		},100);
 	});
 	

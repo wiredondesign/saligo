@@ -212,8 +212,6 @@ $(document).ready(function()
 		{
 			if(productType != "vintage" && productType != "mottled" && productType != "speckled" && productType != "mercury")
 			{
-				$(".q5-next").trigger("touchstart");
-				$(".q5-next").trigger("click");
 				$(".q6-next").trigger("touchstart");
 				$(".q6-next").trigger("click");
 // 				alert("Please select glass toughening.");

@@ -185,8 +185,8 @@ $(document).ready(function()
 		$("#no-toughening-2").prop("checked", true);
 		$("#polished-edge-2").prop("checked", true);
 		
-		$(".question-6").hide();
-		$(".question-7").show();
+		$(".question-5").hide();
+		$(".question-6").show();
 		
 		setTimeout(function()
 		{

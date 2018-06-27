@@ -304,7 +304,6 @@ $(document).ready(function()
 			{
 				$(".quote-ready").hide();
 				$(".quote-cost").show();
-// 				window.location.reload();
 			},100);
 		}
 	});

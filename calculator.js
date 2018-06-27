@@ -303,8 +303,8 @@ $(document).ready(function()
 			setTimeout(function()
 			{
 				$(".quote-ready").hide();
-				$(".quote-cost").hide();
-				window.location.reload();
+				$(".quote-cost").show();
+// 				window.location.reload();
 			},100);
 		}
 	});

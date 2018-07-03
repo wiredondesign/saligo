@@ -50,6 +50,9 @@ setTimeout(function()
 var productList = 
 {
     "vintage" : 810,
+    "gold vintage" : 810,
+    "white vintage" : 810,
+    "bronze vintage" : 810,
     "pioggia" : 420,
     "milano" : 570,
     "mercury" : 670,

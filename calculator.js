@@ -298,6 +298,10 @@ $(document).ready(function()
 			{
 				$(".quote-ready").hide();
 				$(".quote-cost").show();
+				
+				setTimeout(function (){
+					window.location = 'https://www.saligodesign.com/thank-you';
+				}, 5000)
 			},100);
 		}
 	});

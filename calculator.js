@@ -350,6 +350,7 @@ $(document).ready(function()
             dataType:"jsonp",
 			success: function(response)
             {
+		    window.location.href = 'https://www.saligodesign.com/thank-you';
             }
         });
         return false;

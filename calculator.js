@@ -351,7 +351,7 @@ $(document).ready(function()
 			success: function(response)
             {
 		    setTimeout(function (){
-			 window.location.href = 'https://www.saligodesign.com/thank-you';
+			 window.location = 'https://www.saligodesign.com/thank-you';
 		     }, 5000)
             }
         });

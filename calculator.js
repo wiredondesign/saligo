@@ -352,7 +352,7 @@ $(document).ready(function()
             {
 		    setTimeout(function (){
 			 window.location.href = 'https://www.saligodesign.com/thank-you';
-		     }, 5000):
+		     }, 5000)
             }
         });
         return false;

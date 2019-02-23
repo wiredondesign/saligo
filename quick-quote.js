@@ -1,5 +1,4 @@
-$(document).ready(function(){
-
-console.log("HELLO GAURAV");
-
-}) 
+$(document).ready(function()
+{
+	console.log("HELLO GAURAV UPDATED");
+});
